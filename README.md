@@ -1030,7 +1030,7 @@ import socket
 # socket.AF_INET  адресное семейство IPv4
 # socket.SOCK_STREAM  протокол TCP (потоковый)
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 try:
     # Пытаемся привязаться к порту 80 (стандартный HTTP-порт)
     # '' означает привязку ко всем доступным сетевым интерфейсам
