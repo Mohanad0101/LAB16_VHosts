@@ -1108,7 +1108,7 @@ nano ~/pywebserver/server.py
 import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 try:
     sock.bind(('', 80))
     print("Using port 80")
@@ -1213,7 +1213,7 @@ def get_file_path(uri):
 
 # === Основной код сервера ===
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 try:
     sock.bind(('', 80))
     print("Using port 80")
@@ -1330,7 +1330,7 @@ Connection: {connection}"""
 
 # === Сервер ===
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 try:
     sock.bind(('', 80))
     print("Using port 80")
@@ -1526,7 +1526,7 @@ def handle_client(conn, addr):
 # === Основной цикл сервера ===
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Повторное использование адреса
-
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 try:
     sock.bind(('', 80))
     print("Using port 80")
@@ -1860,7 +1860,7 @@ def handle_client(conn, addr):
 # === Сервер ===
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 try:
     sock.bind(('', PORT))
     print(f"Using port {PORT}")
