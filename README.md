@@ -120,6 +120,7 @@ graph TB
 ip addr show
 
 # Редактирование конфигурации netplan
+ls /etc/netplan/
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
 
