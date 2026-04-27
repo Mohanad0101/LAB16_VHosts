@@ -555,7 +555,9 @@ sudo nano /etc/hosts
 curl -s http://site1.local | grep "title"
 curl -s http://site2.local | grep "title"
 ```
-
+Откройте браузер на Linux mint:
+- 🌐 `http://site1.local`  должен открыться Сайт 1 (красная тема)
+- 🌐 `http://site2.local`  должен открыться Сайт 2 (зелёная тема)
 ---
 
 ### Проверка из Windows-хоста
